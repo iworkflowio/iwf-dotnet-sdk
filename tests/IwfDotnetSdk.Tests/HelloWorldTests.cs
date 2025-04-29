@@ -1,9 +1,11 @@
+using IwfDotnetSdk.ApiClients.Model;
+
 namespace IwfDotnetSdk.Tests;
 
 public class HelloWorldTests
 {
     [Fact]
-    public void Hello_ReturnsHelloWorld()
+    public void Hello_ReturnsHelloWorldWithTimerStatus()
     {
         // Arrange
         var helloWorld = new HelloWorld();
@@ -12,6 +14,8 @@ public class HelloWorldTests
         var result = helloWorld.Hello();
         
         // Assert
-        Assert.Equal("Hello, World!", result);
+        Assert.Contains("Timer status can be:", result);
+        Assert.Contains(TimerStatus.SCHEDULED.ToString(), result);
+        Assert.Contains(TimerStatus.FIRED.ToString(), result);
     }
 }
