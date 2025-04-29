@@ -11,6 +11,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{C468896F
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IwfDotnetSdk.Tests", "tests\IwfDotnetSdk.Tests\IwfDotnetSdk.Tests.csproj", "{D8C5C9C1-24D8-4221-9BE9-AF8FF9B05FA8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IwfDotnetSdk.ApiClients", "src\IwfDotnetSdk.ApiClients\IwfDotnetSdk.ApiClients.csproj", "{F5EAF7F9-58E3-463C-BC38-CE0C61DCBFE5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -28,9 +30,14 @@ Global
 		{D8C5C9C1-24D8-4221-9BE9-AF8FF9B05FA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D8C5C9C1-24D8-4221-9BE9-AF8FF9B05FA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D8C5C9C1-24D8-4221-9BE9-AF8FF9B05FA8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5EAF7F9-58E3-463C-BC38-CE0C61DCBFE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5EAF7F9-58E3-463C-BC38-CE0C61DCBFE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5EAF7F9-58E3-463C-BC38-CE0C61DCBFE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5EAF7F9-58E3-463C-BC38-CE0C61DCBFE5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{30B7544E-2E3A-4932-9756-5E3E2A0C8433} = {E6DF5646-5666-47ED-9B3D-BF84E002EEEC}
 		{D8C5C9C1-24D8-4221-9BE9-AF8FF9B05FA8} = {C468896F-9F5A-422A-834B-2E4831C0C06F}
+		{F5EAF7F9-58E3-463C-BC38-CE0C61DCBFE5} = {E6DF5646-5666-47ED-9B3D-BF84E002EEEC}
 	EndGlobalSection
 EndGlobal
