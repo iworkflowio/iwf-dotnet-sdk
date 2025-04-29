@@ -7,14 +7,9 @@ namespace IwfDotnetSdk.Core
     /// A wrapper around the generated API Context class that provides more convenient accessors
     /// and additional functionality.
     /// </summary>
-    public class WorkflowContext
+    public record WorkflowContext
     {
         private readonly Context _context;
-
-        public WorkflowContext(Context context)
-        {
-            _context = context ?? throw new ArgumentNullException(nameof(context));
-        }
 
         /// <summary>
         /// Gets the workflow start timestamp in seconds since epoch.
@@ -25,7 +20,7 @@ namespace IwfDotnetSdk.Core
         /// Gets the state execution ID, if available.
         /// Only applicable for state methods (waitUntil or execute)
         /// </summary>
-        public string StateExecutionId => _context.StateExecutionId;
+        public string? StateExecutionId => _context.StateExecutionId;
 
         /// <summary>
         /// Checks if the StateExecutionId is available.
@@ -68,5 +63,10 @@ namespace IwfDotnetSdk.Core
         /// Provides access to the underlying API Context object.
         /// </summary>
         public Context ApiContext => _context;
+
+        public WorkflowContext(Context context)
+        {
+            _context = context ?? throw new ArgumentNullException(nameof(context));
+        }
     }
 }
